@@ -1,0 +1,241 @@
+technique "bonus.tech"
+{
+	material "default material";
+	texture_slot "texture";
+	pass "glow";
+	pass "noshader";
+	pass "shadow"
+	{
+		use_textures false;
+	};
+	pass "light";
+};
+
+bonus "small score"
+{
+	probability 2.0;
+	score 80;
+	text "80";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "cash 1.png";
+
+	collect_sound "cash.ogg";
+};
+
+bonus "medium score"
+{
+	probability 1.0;
+	score 200;
+	text "200";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "cash 2.png";
+
+	collect_sound "cash.ogg";
+};
+
+bonus "big score"
+{
+	probability 0.5;
+	score 500;
+	text "500";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "cash 3.png";
+
+	collect_sound "cash.ogg";
+};
+
+bonus "huge score"
+{
+	probability 0.0;
+	score 4000;
+	text "4000";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "cash 4.png";
+
+	collect_sound "cash.ogg";
+};
+
+bonus "extra life"
+{
+	probability 0.15;
+	extra_life;
+	text "1 UP";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "ankh.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "high gravity"
+{
+	probability 0.5;
+	gravity 2.0;
+	duration 30.0;
+	text "High grav";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "1ton.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "low gravity"
+{
+	probability 0.5;
+	gravity 0.5;
+	duration 30.0;
+	text "Low grav";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "feather.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "zero gravity"
+{
+	probability 0.3;
+	gravity 0.0;
+	duration 15.0;
+	text "Zero G";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "float.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "slippery"
+{
+	probability 0.5;
+	friction 0.1;
+	duration 20.0;
+	text "Slippery";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "oil.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "good luck"
+{
+	probability 0.2;
+	fill_bonus "medium score";
+	duration 20.0;
+	text "Lucky!";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "clover.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "new normal ball"
+{
+	probability 0.3;
+	new_ball "normal ball";
+	text "Ball";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "grey ball.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "new power ball"
+{
+	probability 0.2;
+	new_ball "power ball";
+	text "Smash";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "blue ball.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "new link ball"
+{
+	probability 0.3;
+	new_ball "link ball";
+	text "Link";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "red ball.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "new collector ball"
+{
+	probability 0.2;
+	new_ball "collector ball";
+	text "Collect";
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "green ball.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "ball magnet"
+{
+	probability 0.3;
+	ball_magnet 4.0;
+	text "Magnet";
+	duration 20.0;
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "magnet.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "unlimited balls"
+{
+	probability 0.2;
+	unlimited_balls;
+	text "Infiniball";
+	duration 30.0;
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "many balls.png";
+
+	collect_sound "bonus.ogg";
+};
+
+bonus "quake"
+{
+	probability 0.3;
+	quake 70;
+	text "Quake";
+	duration 20.0;
+
+	mesh "capsule.mesh";
+	technique "bonus.tech";
+	texture "crack.png";
+
+	collect_sound "bonus.ogg";
+};

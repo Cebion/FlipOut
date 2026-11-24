@@ -1,0 +1,75 @@
+/* $Id: Build 42 2009-10-05 16:38:17Z tdb $ */
+
+package "mspgbase"
+{
+	version "1.1";
+	description "Base graphics and input library";
+
+	require "mspcore";
+	require "mspstrings";
+	require "sigc++-2.0";
+	if "arch!=win32"
+	{
+		require "xlib";
+	};
+	if "arch=win32"
+	{
+		build_info
+		{
+			library "gdi32";
+		};
+	};
+
+	feature "devil" "Include DevIL support for loading image files";
+	if "with_devil"
+	{
+		require "devil";
+	};
+
+	feature "libpng" "Include libpng support for loading PNG files (also requires libmspio)";
+	if "with_png"
+	{
+		require "libpng";
+		require "mspio";
+	};
+
+	feature "opengl" "Include support for OpenGL contexts";
+	if "with_opengl"
+	{
+		require "opengl";
+	};
+
+	feature "xf86vidmode" "Include support for video mode switching with xf86vidmode (not win32)";
+	if "with_xf86vidmode and arch!=win32"
+	{
+		build_info
+		{
+			library "Xxf86vm";
+		};
+	};
+
+	headers "msp/gbase"
+	{
+		source "source/gbase";
+		install true;
+	};
+
+	headers "msp/input"
+	{
+		source "source/input";
+		install true;
+	};
+
+	library "mspgbase"
+	{
+		source "source/gbase";
+		source "source/input";
+		install true;
+	};
+
+	tarball "@src"
+	{
+		source "License.txt";
+		source "Changelog.txt";
+	};
+};

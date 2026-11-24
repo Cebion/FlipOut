@@ -1,0 +1,26 @@
+package "mspal"
+{
+	version "0.10";
+	description "C++ wrapper for OpenAL";
+
+	require "vorbisfile";
+	require "openal";
+	require "mspcore";
+
+	headers "msp/al"
+	{
+		source "source";
+		install true;
+	};
+
+	library "mspal"
+	{
+		source "source";
+		install true;
+	};
+
+	tarball "@src"
+	{
+		source "License.txt";
+	};
+};

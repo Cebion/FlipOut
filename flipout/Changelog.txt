@@ -1,0 +1,8 @@
+1.1
+* Mouse control
+* Some technical improvements
+
+1.0
+* First release
+
+($Id$)

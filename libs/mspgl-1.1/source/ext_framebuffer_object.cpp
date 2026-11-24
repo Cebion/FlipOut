@@ -1,0 +1,47 @@
+#include "extension.h"
+#include "ext_framebuffer_object.h"
+
+namespace Msp {
+namespace GL {
+
+PFNGLISRENDERBUFFEREXTPROC glIsRenderbufferEXT=0;
+PFNGLBINDRENDERBUFFEREXTPROC glBindRenderbufferEXT=0;
+PFNGLDELETERENDERBUFFERSEXTPROC glDeleteRenderbuffersEXT=0;
+PFNGLGENRENDERBUFFERSEXTPROC glGenRenderbuffersEXT=0;
+PFNGLRENDERBUFFERSTORAGEEXTPROC glRenderbufferStorageEXT=0;
+PFNGLGETRENDERBUFFERPARAMETERIVEXTPROC glGetRenderbufferParameterivEXT=0;
+PFNGLISFRAMEBUFFEREXTPROC glIsFramebufferEXT=0;
+PFNGLBINDFRAMEBUFFEREXTPROC glBindFramebufferEXT=0;
+PFNGLDELETEFRAMEBUFFERSEXTPROC glDeleteFramebuffersEXT=0;
+PFNGLGENFRAMEBUFFERSEXTPROC glGenFramebuffersEXT=0;
+PFNGLCHECKFRAMEBUFFERSTATUSEXTPROC glCheckFramebufferStatusEXT=0;
+PFNGLFRAMEBUFFERTEXTURE1DEXTPROC glFramebufferTexture1DEXT=0;
+PFNGLFRAMEBUFFERTEXTURE2DEXTPROC glFramebufferTexture2DEXT=0;
+PFNGLFRAMEBUFFERTEXTURE3DEXTPROC glFramebufferTexture3DEXT=0;
+PFNGLFRAMEBUFFERRENDERBUFFEREXTPROC glFramebufferRenderbufferEXT=0;
+PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVEXTPROC glGetFramebufferAttachmentParameterivEXT=0;
+PFNGLGENERATEMIPMAPEXTPROC glGenerateMipmapEXT=0;
+
+void init_ext_framebuffer_object()
+{
+	glIsRenderbufferEXT=reinterpret_cast<PFNGLISRENDERBUFFEREXTPROC>(get_proc_address("glIsRenderbufferEXT"));
+	glBindRenderbufferEXT=reinterpret_cast<PFNGLBINDRENDERBUFFEREXTPROC>(get_proc_address("glBindRenderbufferEXT"));
+	glDeleteRenderbuffersEXT=reinterpret_cast<PFNGLDELETERENDERBUFFERSEXTPROC>(get_proc_address("glDeleteRenderbuffersEXT"));
+	glGenRenderbuffersEXT=reinterpret_cast<PFNGLGENRENDERBUFFERSEXTPROC>(get_proc_address("glGenRenderbuffersEXT"));
+	glRenderbufferStorageEXT=reinterpret_cast<PFNGLRENDERBUFFERSTORAGEEXTPROC>(get_proc_address("glRenderbufferStorageEXT"));
+	glGetRenderbufferParameterivEXT=reinterpret_cast<PFNGLGETRENDERBUFFERPARAMETERIVEXTPROC>(get_proc_address("glGetRenderbufferParameterivEXT"));
+	glIsFramebufferEXT=reinterpret_cast<PFNGLISFRAMEBUFFEREXTPROC>(get_proc_address("glIsFramebufferEXT"));
+	glBindFramebufferEXT=reinterpret_cast<PFNGLBINDFRAMEBUFFEREXTPROC>(get_proc_address("glBindFramebufferEXT"));
+	glDeleteFramebuffersEXT=reinterpret_cast<PFNGLDELETEFRAMEBUFFERSEXTPROC>(get_proc_address("glDeleteFramebuffersEXT"));
+	glGenFramebuffersEXT=reinterpret_cast<PFNGLGENFRAMEBUFFERSEXTPROC>(get_proc_address("glGenFramebuffersEXT"));
+	glCheckFramebufferStatusEXT=reinterpret_cast<PFNGLCHECKFRAMEBUFFERSTATUSEXTPROC>(get_proc_address("glCheckFramebufferStatusEXT"));
+	glFramebufferTexture1DEXT=reinterpret_cast<PFNGLFRAMEBUFFERTEXTURE1DEXTPROC>(get_proc_address("glFramebufferTexture1DEXT"));
+	glFramebufferTexture2DEXT=reinterpret_cast<PFNGLFRAMEBUFFERTEXTURE2DEXTPROC>(get_proc_address("glFramebufferTexture2DEXT"));
+	glFramebufferTexture3DEXT=reinterpret_cast<PFNGLFRAMEBUFFERTEXTURE3DEXTPROC>(get_proc_address("glFramebufferTexture3DEXT"));
+	glFramebufferRenderbufferEXT=reinterpret_cast<PFNGLFRAMEBUFFERRENDERBUFFEREXTPROC>(get_proc_address("glFramebufferRenderbufferEXT"));
+	glGetFramebufferAttachmentParameterivEXT=reinterpret_cast<PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVEXTPROC>(get_proc_address("glGetFramebufferAttachmentParameterivEXT"));
+	glGenerateMipmapEXT=reinterpret_cast<PFNGLGENERATEMIPMAPEXTPROC>(get_proc_address("glGenerateMipmapEXT"));
+}
+
+} // namespace GL
+} // namespace Msp

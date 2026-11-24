@@ -1,0 +1,21 @@
+background "Electric Cells"
+{
+	texture "electric cells.png";
+};
+
+background "Alien DNA"
+{
+	texture "alien dna.png";
+};
+
+background "Fiery Lines"
+{
+	texture "fiery lines.png";
+};
+
+background "Cosmic Strings"
+{
+	texture "cosmic strings.png";
+	shader "reflect.shader";
+	reflect 0.5;
+};

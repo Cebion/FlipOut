@@ -1,0 +1,14 @@
+.config
+temp
+/grep
+/libmspcore.a
+/libmspcore.so
+/libmspcore.dylib
+/ls
+/mspcore.pc
+/syncdir
+/tests/consoletest
+/tests/test
+/tests/test.txt
+/transcode
+/z

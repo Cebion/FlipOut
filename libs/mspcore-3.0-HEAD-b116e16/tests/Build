@@ -1,0 +1,15 @@
+package "mspcore-tests"
+{
+	require "mspcore";
+	require "msptest";
+
+	program "test"
+	{
+		source ".";
+	};
+
+	program "consoletest"
+	{
+		source "console/console.cpp";
+	};
+};

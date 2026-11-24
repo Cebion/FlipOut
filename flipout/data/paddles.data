@@ -1,0 +1,17 @@
+technique "paddle.tech"
+{
+	texture_slot "texture";
+	pass "glow";
+	pass "noshader";
+	pass "light";
+};
+
+paddle "normal paddle"
+{
+	size 5.1 0.7 0.8;
+	round_ends true;
+
+	mesh "paddle.mesh";
+	technique "paddle.tech";
+	texture "paddle.png";
+};

@@ -1,0 +1,13 @@
+1.1.1
+* Enhancements
+  - Use lexical_cast instead of istringstream
+
+1.1
+* More Loader helpers
+* Add a compile mode to mspdatatool
+* Support source file markers for better error reporting
+
+1.0
+* First release
+
+($Id: Changelog.txt 57 2009-09-21 16:57:45Z tdb $)

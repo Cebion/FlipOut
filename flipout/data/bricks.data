@@ -1,0 +1,493 @@
+/* $Id$ */
+
+technique "marble brick.tech"
+{
+	shader "marble.shader"
+	{
+		uniform1i "use_shadow" 0;
+	};
+	shader_texture "noise";
+	pass "glow";
+	pass "noshader";
+	pass "shadow"
+	{
+		use_textures false;
+	};
+	pass "light"
+	{
+		shader "marble.shader"
+		{
+			uniform1i "use_shadow" 1;
+			uniform1i "shadow" 2;
+		};
+	};
+};
+
+brick "marble piece"
+{
+	size 0.4 0.4 0.4;
+	durability 1;
+	score 1;
+	color "default";
+	bonus_chance 0;
+
+	mesh "piece1.mesh";
+	lod_mesh 1 "piece0.mesh";
+	technique "marble brick.tech";
+};
+
+color_scheme "spectrum"
+{
+	color "white"
+	{
+		color     0.84 0.84 0.84;
+		variation 0.06 0.06 0.06;
+	};
+	color "red"
+	{
+		color     0.84 0.00 0.00;
+		variation 0.06 0.00 0.00;
+	};
+	color "orange"
+	{
+		color     0.84 0.52 0.00;
+		variation 0.06 0.04 0.00;
+	};
+	color "yellow"
+	{
+		color     0.84 0.84 0.00;
+		variation 0.06 0.06 0.00;
+	};
+	color "lime"
+	{
+		color     0.52 0.84 0.00;
+		variation 0.04 0.06 0.00;
+	};
+	color "green"
+	{
+		color     0.00 0.84 0.00;
+		variation 0.00 0.06 0.00;
+	};
+	color "jade"
+	{
+		color     0.00 0.84 0.52;
+		variation 0.00 0.06 0.04;
+	};
+	color "cyan"
+	{
+		color     0.00 0.84 0.84;
+		variation 0.00 0.06 0.06;
+	};
+	color "turquoise"
+	{
+		color     0.00 0.54 0.84;
+		variation 0.00 0.04 0.06;
+	};
+	color "blue"
+	{
+		color     0.00 0.00 0.84;
+		variation 0.00 0.00 0.06;
+	};
+	color "indigo"
+	{
+		color     0.42 0.00 0.84;
+		variation 0.03 0.00 0.06;
+	};
+	color "purple"
+	{
+		color     0.84 0.00 0.84;
+		variation 0.06 0.00 0.06;
+	};
+	color "crimson"
+	{
+		color     0.84 0.00 0.42;
+		variation 0.06 0.00 0.03;
+	};
+};
+
+brick "marble"
+{
+	size 2 1 1;
+	durability 1;
+	score 10;
+	explode "marble piece"
+	{
+		count 15;
+	};
+	color_scheme "spectrum";
+
+	mesh "brick1.mesh";
+	lod_mesh 1 "brick0.mesh";
+	technique "marble brick.tech";
+
+	hit_sound "hit_stone.ogg";
+};
+
+brick "marble half"
+{
+	size 1 1 1;
+	durability 1;
+	score 10;
+	bonus_chance 0;
+	explode "marble piece"
+	{
+		count 7;
+	};
+	color_scheme "spectrum";
+
+	mesh "brick1h.mesh";
+	lod_mesh 1 "brick0h.mesh";
+	technique "marble brick.tech";
+
+	hit_sound "hit_stone.ogg";
+};
+
+technique "metallic brick.tech"
+{
+	shader "metal.shader"
+	{
+		uniform1i "use_shadow" 0;
+	};
+	pass "glow";
+	pass "noshader";
+	pass "shadow"
+	{
+		use_textures false;
+	};
+	pass "light"
+	{
+		shader "metal.shader"
+		{
+			uniform1i "use_shadow" 1;
+			uniform1i "shadow" 2;
+		};
+	};
+};
+
+brick "steel piece"
+{
+	size 0.4 0.4 0.4;
+	score 1;
+	color "default";
+	bonus_chance 0;
+
+	mesh "piece4.mesh";
+	lod_mesh 1 "piece0.mesh";
+	technique "metallic brick.tech";
+};
+
+brick "steel"
+{
+	size 2 1 1;
+	durability 2;
+	score 15;
+	explode "steel piece"
+	{
+		count 15;
+	};
+	color "white"
+	{
+		color 0.7 0.7 0.7;
+		variation 0.06 0.06 0.06;
+	};
+
+	mesh "brick6.mesh";
+	lod_mesh 1 "brick0.mesh";
+	technique "metallic brick.tech";
+
+	hit_sound "hit_metal.ogg";
+};
+
+brick "steel half"
+{
+	size 1 1 1;
+	durability 2;
+	score 15;
+	explode "steel piece"
+	{
+		count 7;
+	};
+	color "white"
+	{
+		color 0.7 0.7 0.7;
+		variation 0.06 0.06 0.06;
+	};
+
+	mesh "brick6h.mesh";
+	lod_mesh 1 "brick0.mesh";
+	technique "metallic brick.tech";
+
+	hit_sound "hit_metal.ogg";
+};
+
+brick "steel hard"
+{
+	size 2 1 1;
+	durability 4;
+	score 20;
+	explode "steel piece"
+	{
+		count 15;
+	};
+	color "blue"
+	{
+		color 0.6 0.65 0.8;
+		variation 0.06 0.06 0.06;
+	};
+
+	mesh "brick6.mesh";
+	lod_mesh 1 "brick0.mesh";
+	technique "metallic brick.tech";
+
+	hit_sound "hit_metal.ogg";
+};
+
+brick "steel hard half"
+{
+	size 1 1 1;
+	durability 4;
+	score 20;
+	explode "steel piece"
+	{
+		count 7;
+	};
+	color "blue"
+	{
+		color 0.6 0.65 0.8;
+		variation 0.06 0.06 0.06;
+	};
+
+	mesh "brick6h.mesh";
+	lod_mesh 1 "brick0.mesh";
+	technique "metallic brick.tech";
+
+	hit_sound "hit_metal.ogg";
+};
+
+technique "clay brick.tech"
+{
+	shader "clay.shader"
+	{
+		uniform1i "use_shadow" 0;
+	};
+	shader_texture "noise";
+	pass "glow";
+	pass "noshader";
+	pass "shadow"
+	{
+		use_textures false;
+	};
+	pass "light"
+	{
+		shader "clay.shader"
+		{
+			uniform1i "use_shadow" 1;
+			uniform1i "shadow" 2;
+		};
+	};
+};
+
+brick "holed piece"
+{
+	size 0.4 0.4 0.4;
+	score 1;
+	bonus_chance 0;
+	color "default";
+
+	mesh "piece5.mesh";
+	lod_mesh 1 "piece0.mesh";
+	technique "clay brick.tech";
+};
+
+color_scheme "clay"
+{
+	color "yellow"
+	{
+		color     0.90 0.80 0.50;
+		variation 0.06 0.05 0.02;
+	};
+	color "red"
+	{
+		color     0.70 0.40 0.30;
+		variation 0.06 0.02 0.01;
+	};
+	color "white"
+	{
+		color     0.80 0.77 0.75;
+		variation 0.06 0.05 0.05;
+	};
+	color "dark red"
+	{
+		color     0.40 0.20 0.10;
+		variation 0.03 0.01 0.01;
+	};
+};
+
+brick "holed"
+{
+	size 2 1 1;
+	durability 1;
+	score 10;
+	explode "holed piece"
+	{
+		count 15;
+	};
+	color_scheme "clay";
+
+	mesh "brick5.mesh";
+	lod_mesh 1 "brick0.mesh";
+	technique "clay brick.tech";
+
+	hit_sound "hit_clay.ogg";
+};
+
+brick "holed long"
+{
+	size 3 1 1;
+	durability 1;
+	score 10;
+	explode "holed piece"
+	{
+		count 20;
+	};
+	color_scheme "clay";
+
+	mesh "brick5l.mesh";
+	lod_mesh 1 "brick0l.mesh";
+	technique "clay brick.tech";
+
+	hit_sound "hit_clay.ogg";
+};
+
+technique "plain brick.tech"
+{
+	pass "glow";
+	pass "noshader";
+	pass "shadow"
+	{
+		use_textures false;
+	};
+	pass "light";
+};
+
+brick "rubber"
+{
+	size 2 1 1;
+	indestructible true;
+	bouncyness 0.02;
+	color "black"
+	{
+		color 0.20 0.20 0.20;
+	};
+
+	mesh "brick4.mesh";
+	lod_mesh 1 "brick0.mesh";
+	technique "plain brick.tech";
+
+	hit_sound "hit_rubber.ogg";
+};
+
+brick "rubber double"
+{
+	size 2 2 1;
+	indestructible true;
+	bouncyness 0.02;
+	color "black"
+	{
+		color 0.20 0.20 0.20;
+	};
+
+	mesh "brick4d.mesh";
+	lod_mesh 1 "brick0d.mesh";
+	technique "plain brick.tech";
+
+	hit_sound "hit_rubber.ogg";
+};
+
+color_scheme "bright"
+{
+	color "blue"
+	{
+		color 0.30 0.30 1.00;
+	};
+	color "green"
+	{
+		color 0.30 1.00 0.30;
+	};
+	color "red"
+	{
+		color 1.00 0.30 0.30;
+	};
+};
+
+technique "glowing brick.tech"
+{
+	pass "glow"
+	{
+		shader "brick glow.shader";
+	};
+	pass "noshader";
+	pass "shadow"
+	{
+		use_textures false;
+	};
+	pass "light";
+};
+
+brick "energy"
+{
+	size 2 1 1;
+	indestructible true;
+	boost 5;
+	color_scheme "bright";
+
+	mesh "brick4.mesh";
+	lod_mesh 1 "brick0.mesh";
+	technique "glowing brick.tech";
+};
+
+brick "energy half"
+{
+	size 1 1 1;
+	indestructible true;
+	boost 5;
+	color_scheme "bright";
+
+	mesh "brick4h.mesh";
+	lod_mesh 1 "brick0h.mesh";
+	technique "glowing brick.tech";
+};
+
+brick "gold"
+{
+	size 2 1 1;
+	indestructible true;
+	color "gold"
+	{
+		color 0.80 0.70 0.20;
+		variation 0.05 0.04 0.01;
+	};
+
+	mesh "brick6.mesh";
+	lod_mesh 1 "brick0.mesh";
+	technique "metallic brick.tech";
+
+	hit_sound "hit_metal.ogg";
+};
+
+brick "gold half"
+{
+	size 1 1 1;
+	indestructible true;
+	color "gold"
+	{
+		color 0.80 0.70 0.20;
+		variation 0.05 0.04 0.01;
+	};
+
+	mesh "brick6h.mesh";
+	lod_mesh 1 "brick0h.mesh";
+	technique "metallic brick.tech";
+
+	hit_sound "hit_metal.ogg";
+};

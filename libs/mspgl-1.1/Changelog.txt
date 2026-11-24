@@ -1,0 +1,22 @@
+1.1
+* Pipeline and effect framework
+* Support for generic vertex attributes
+* RAII classes for push/pop_matrix and bind/unbind 
+* Viewport control functions
+* Blender exporter
+  - Store settings between runs
+  - Export texture coordinates and TB vectors
+  - Apply modifiers to mesh when exporting
+* Various bugfixes
+
+1.0
+* Add class Technique to share passes between Objects
+* Scene automatically recognizes ObjectInstances and optimizes rendering them
+* Various Builders should now be constructed directly
+* Convert Material, TexEnv and Light to object model
+* Bugfixes
+
+0.9
+* First release
+
+($Id: Changelog.txt 85 2009-10-05 18:48:09Z tdb $)

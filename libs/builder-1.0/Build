@@ -1,0 +1,31 @@
+/* $Id: Build 103 2009-09-21 18:57:29Z tdb $ */
+
+package "builder"
+{
+	version "1.0";
+	description "Mikkosoft Productions software builder";
+
+	require "mspcore";
+	require "mspstrings";
+	require "mspdatafile";
+	require "mspfs";
+	require "sigc++-2.0";
+
+	program "builder"
+	{
+		source "source";
+		install true;
+	};
+
+	tarball "@src"
+	{
+		source "bootstrap.sh";
+		source "Readme.txt";
+		source "License.txt";
+	};
+
+	install "share/builder"
+	{
+		source "builderrc";
+	};
+};

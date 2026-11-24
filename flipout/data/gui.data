@@ -1,0 +1,1404 @@
+ui_resources
+{
+	default_font "grunge-20.font";
+
+	style "panel"
+	{
+		special "children";
+	};
+
+	style "root"
+	{
+		special "children";
+	};
+
+	style "label"
+	{
+		special "text"
+		{
+			align 0 0.5;
+			fill 0 0;
+			margin { left 10; right 10; };
+		};
+	};
+
+	style "label-number"
+	{
+		special "text"
+		{
+			align 1 0.5;
+			fill 0 0;
+			margin { left 10; right 10; };
+		};
+	};
+
+	style "label-score"
+	{
+		font "grunge-50.font";
+		special "text"
+		{
+			align 1 0.5;
+			fill 0 0;
+			margin { left 10; right 10; };
+		};
+	};
+
+	style "label-title"
+	{
+		font "grunge-50.font";
+		special "text"
+		{
+			align 0.5 0.5;
+			fill 0 0;
+		};
+	};
+
+	style "label-wndtitle"
+	{
+		font "grunge-30.font";
+		special "text"
+		{
+			align 0.5 0.5;
+			fill 0 0;
+		};
+	};
+
+	graphic "window bg"
+	{
+		texture "gui.png";
+		slice 0 0 80 60;
+		border { left 20; right 20; top 21; bottom 9; };
+		repeat true;
+	};
+
+	style "panel-window"
+	{
+		part
+		{
+			graphic NORMAL "window bg";
+		};
+		special "children";
+	};
+
+	graphic "thin window bg"
+	{
+		texture "gui.png";
+		slice 0 62 60 48;
+		border { left 9; right 9; top 9; bottom 9; };
+	};
+
+	style "panel-thin window"
+	{
+		part
+		{
+			graphic NORMAL "thin window bg";
+		};
+		special "children";
+	};
+
+	graphic "blue button"
+	{
+		texture "gui.png";
+		slice 82 44 20 20;
+		border { left 9; right 9; top 9; bottom 9; };
+	};
+
+	graphic "blue button highlight"
+	{
+		texture "gui.png";
+		slice 82 22 20 20;
+		border { left 9; right 9; top 9; bottom 9; };
+	};
+
+	style "button"
+	{
+		font_color 0.8 0.8 0.8;
+		part
+		{
+			graphic NORMAL "blue button";
+			graphic HOVER "blue button highlight";
+		};
+		special "text"
+		{
+			align 0.5 0.5;
+			fill 0 0;
+		};
+	};
+
+	graphic "grey area"
+	{
+		texture "gui.png";
+		slice 82 0 20 20;
+		border { left 9; right 9; top 9; bottom 9; };
+	};
+
+	graphic "entry cursor"
+	{
+		texture "gui.png";
+		slice 104 0 4 22;
+	};
+
+	style "entry"
+	{
+		part
+		{
+			graphic NORMAL "grey area";
+		};
+
+		special "text"
+		{
+			align 0 0.5;
+			fill 0 0;
+			margin { left 7; };
+		};
+
+		special "cursor"
+		{
+			graphic FOCUS "entry cursor";
+			align 0 0.5;
+			fill 0 0;
+			margin { left 7; };
+		};
+	};
+
+	graphic "vslider bg"
+	{
+		texture "gui.png";
+		slice 62 88 12 32;
+		border { left 6; right 6; top 7; bottom 7; };
+	};
+
+	graphic "vslider thumb"
+	{
+		texture "gui.png";
+		slice 76 88 12 32;
+		border { left 6; right 6; top 7; bottom 7; };
+	};
+
+	style "vslider"
+	{
+		part
+		{
+			graphic NORMAL "vslider bg";
+		};
+
+		special "slider"
+		{
+			graphic NORMAL "vslider thumb";
+			fill 1 0;
+		};
+	};
+
+	graphic "hslider bg"
+	{
+		texture "gui.png";
+		slice 28 112 32 12;
+		border { left 7; right 7; top 6; bottom 6; };
+	};
+
+	graphic "hslider thumb"
+	{
+		texture "gui.png";
+		slice 90 116 32 12;
+		border { left 7; right 7; top 6; bottom 6; };
+	};
+
+	style "hslider"
+	{
+		part
+		{
+			graphic NORMAL "hslider bg";
+		};
+
+		special "slider"
+		{
+			graphic NORMAL "hslider thumb";
+			fill 0 1;
+		};
+	};
+
+	style "splash"
+	{
+		font "grunge-50.font";
+	};
+
+	style "list"
+	{
+		part
+		{
+			graphic NORMAL "grey area";
+			margin { right 12; };
+		};
+		special "selection"
+		{
+			align 0.5 0.5;
+			fill 1 1;
+			margin { right 12; };
+			graphic NORMAL "blue button";
+		};
+		special "items"
+		{
+			align 0.5 0.5;
+			fill 0 0;
+			margin { right 12; };
+		};
+		special "slider"
+		{
+			align 1 0.5;
+			fill 0 1;
+			size 12 0;
+		};
+	};
+
+	graphic "check mark"
+	{
+		texture "gui.png";
+		slice 62 66 20 20;
+	};
+
+	style "toggle"
+	{
+		part
+		{
+			graphic NORMAL "grey area";
+			align 0 0.5;
+			fill 0 0;
+		};
+		part
+		{
+			graphic ACTIVE "check mark";
+			align 0 0.5;
+			fill 0 0;
+		};
+	};
+
+	graphic "arrow left"
+	{
+		texture "gui.png";
+		slice 110 0 18 18;
+	};
+
+	graphic "arrow down"
+	{
+		texture "gui.png";
+		slice 110 20 18 18;
+	};
+
+	style "dropdown"
+	{
+		part
+		{
+			graphic NORMAL "blue button";
+			graphic HOVER "blue button highlight";
+		};
+		part
+		{
+			graphic NORMAL "arrow left";
+			graphic ACTIVE "arrow down";
+			align 1 0.5;
+			fill 0 0;
+			margin { right 5; };
+		};
+		special "text"
+		{
+			align 0 0.5;
+			fill 0 0;
+			margin { left 6; };
+		};
+		special "list";
+	};
+
+	style "float"
+	{
+		font "grunge-30.font";
+	};
+
+	style "table"
+	{
+		special "cells"
+		{
+			align 0 0.5;
+			fill 0 0;
+			margin { left 10; right 10; };
+		};
+	};
+};
+
+userinterface "game"
+{
+	root
+	{
+		size 800 600;
+
+		label "lbl_score"
+		{
+			style "score";
+			size 200 50;
+			position 600 550;
+			text "Score";
+		};
+
+		label "lbl_level"
+		{
+			size 300 25;
+			position 0 575;
+			text "Level";
+		};
+
+		label "lbl_lives"
+		{
+			size 200 25;
+			position 0 550;
+			text "Lives";
+		};
+
+		panel "pnl_awards"
+		{
+			style "thin window";
+			size 320 45;
+			position 240 275;
+			visible false;
+
+			label "lbl_award_name"
+			{
+				size 200 25;
+				position 10 10;
+				text "Total score:";
+			};
+
+			label "lbl_total_score"
+			{
+				style "number";
+				size 100 25;
+				position 210 10;
+				text "0";
+			};
+		};
+
+		panel "pnl_entername"
+		{
+			style "thin window";
+			size 320 120;
+			position 240 240;
+			visible false;
+
+			label ""
+			{
+				size 300 30;
+				position 10 80;
+				text "You made it to the top 10!  Enter your name:";
+			};
+
+			entry "ent_name"
+			{
+				size 300 30;
+				position 10 50;
+			};
+
+			button "btn_name_ok"
+			{
+				size 100 30;
+				position 210 10;
+				text "Ok";
+			};
+		};
+
+		panel "pnl_perfdata"
+		{
+			size 150 100;
+			position 0 0;
+
+			label "lbl_framerate"
+			{
+				size 150 25;
+				position 0 75;
+				text "Framerate:";
+			};
+
+			label "lbl_tickperf"
+			{
+				size 150 25;
+				position 0 50;
+				text "Coll/step/draw:";
+			};
+
+			label "lbl_objects"
+			{
+				size 150 25;
+				position 0 25;
+				text "Objects:";
+			};
+
+			label "lbl_contacts"
+			{
+				size 150 25;
+				position 0 0;
+				text "Contacts:";
+			};
+		};
+	};
+};
+
+userinterface "frontend"
+{
+	root
+	{
+		size 800 600;
+
+		label ""
+		{
+			style "title";
+			size 200 50;
+			position 300 500;
+			text "FlipOut";
+		};
+
+		label ""
+		{
+			size 300 30;
+			position 500 0;
+			text "Copyright © 2007-2008  Mikkosoft Productions";
+		};
+
+		panel "pnl_mainmenu"
+		{
+			style "window";
+			size 240 300;
+			position 280 160;
+
+			label ""
+			{
+				style "wndtitle";
+				size 200 35;
+				position 20 245;
+				text "Main Menu";
+			};
+
+			button "btn_game"
+			{
+				size 200 30;
+				position 20 200;
+				text "Start game";
+			};
+
+			button "btn_settings"
+			{
+				size 200 30;
+				position 20 160;
+				text "Settings";
+			};
+
+			button "btn_editor"
+			{
+				size 200 30;
+				position 20 120;
+				text "Level Editor";
+			};
+
+			button "btn_hall_of_fame"
+			{
+				size 200 30;
+				position 20 80;
+				text "Hall of Fame";
+			};
+
+			button "btn_quit"
+			{
+				size 200 30;
+				position 20 20;
+				text "Quit";
+			};
+		};
+
+		panel "pnl_settings"
+		{
+			style "window";
+			size 240 300;
+			position 280 160;
+			visible false;
+
+			label ""
+			{
+				style "wndtitle";
+				size 200 35;
+				position 20 245;
+				text "Settings";
+			};
+
+			button "btn_video_settings"
+			{
+				size 200 30;
+				position 20 200;
+				text "Video";
+			};
+
+			button "btn_audio_settings"
+			{
+				size 200 30;
+				position 20 160;
+				text "Audio";
+			};
+
+			button "btn_control_settings"
+			{
+				size 200 30;
+				position 20 120;
+				text "Controls";
+			};
+
+			button "btn_game_settings"
+			{
+				size 200 30;
+				position 20 80;
+				text "Game";
+			};
+
+			button "btn_settings_back"
+			{
+				size 200 30;
+				position 20 20;
+				text "Back";
+			};
+		};
+
+		panel "pnl_control_settings"
+		{
+			style "window";
+			size 620 380;
+			position 90 80;
+			visible false;
+
+			label ""
+			{
+				style "wndtitle";
+				size 580 35;
+				position 20 325;
+				text "Control Settings";
+			};
+
+			label ""
+			{
+				position 20 280;
+				size 130 30;
+				text "Move left";
+			};
+
+			button "btn_control_move_left"
+			{
+				position 150 280;
+				size 150 30;
+			};
+
+			label ""
+			{
+				position 20 240;
+				size 130 30;
+				text "Move right";
+			};
+
+			button "btn_control_move_right"
+			{
+				position 150 240;
+				size 150 30;
+			};
+
+			label ""
+			{
+				position 20 200;
+				size 130 30;
+				text "Turbo";
+			};
+
+			button "btn_control_turbo"
+			{
+				position 150 200;
+				size 150 30;
+			};
+
+			label ""
+			{
+				position 20 160;
+				size 130 30;
+				text "Flip clockwise";
+			};
+
+			button "btn_control_flip_cw"
+			{
+				position 150 160;
+				size 150 30;
+			};
+
+			label ""
+			{
+				position 20 120;
+				size 130 30;
+				text "Flip counter-clockwise";
+			};
+
+			button "btn_control_flip_ccw"
+			{
+				position 150 120;
+				size 150 30;
+			};
+
+			label ""
+			{
+				position 20 80;
+				size 130 30;
+				text "Pause";
+			};
+
+			button "btn_control_pause"
+			{
+				position 150 80;
+				size 150 30;
+			};
+
+			label ""
+			{
+				position 320 280;
+				size 130 30;
+				text "Sensitivity";
+			};
+
+			hslider "sld_sensitivity"
+			{
+				position 450 285;
+				size 150 20;
+				range 3 15;
+				value 7;
+				step 1;
+			};
+
+			label ""
+			{
+				position 320 240;
+				size 130 30;
+				text "Speed";
+			};
+
+			hslider "sld_speed"
+			{
+				position 450 245;
+				size 150 20;
+				range 3 10;
+				value 6;
+				step 1;
+			};
+
+			button "btn_control_settings_back"
+			{
+				size 200 30;
+				position 400 20;
+				text "Back";
+			};
+		};
+
+		panel "pnl_game"
+		{
+			style "window";
+			size 240 300;
+			position 280 160;
+			visible false;
+
+			label ""
+			{
+				style "wndtitle";
+				size 200 35;
+				position 20 245;
+				text "Start Game";
+			};
+
+			button "btn_start_default_series"
+			{
+				size 200 30;
+				position 20 200;
+				text "Normal game";
+			};
+
+			/*button "btn_start_custom_series"
+			{
+				size 200 30;
+				position 20 160;
+				text "Custom series";
+			};*/
+
+			button "btn_start_single_level"
+			{
+				size 200 30;
+				position 20 160;
+				text "Single level";
+			};
+
+			button "btn_game_back"
+			{
+				size 200 30;
+				position 20 20;
+				text "Back";
+			};
+		};
+
+		panel "pnl_single_level"
+		{
+			style "window";
+			size 240 300;
+			position 280 160;
+			visible false;
+
+			label ""
+			{
+				style "wndtitle";
+				size 200 35;
+				position 20 245;
+				text "Start Single Level";
+			};
+
+			list "lst_levels"
+			{
+				size 200 135;
+				position 20 100;
+			};
+
+			button "btn_single_level_ok"
+			{
+				size 200 30;
+				position 20 60;
+				text "Start";
+			};
+
+			button "btn_single_level_back"
+			{
+				size 200 30;
+				position 20 20;
+				text "Back";
+			};
+		};
+
+		panel "pnl_capture_control"
+		{
+			style "thin window";
+			size 200 70;
+			position 300 270;
+			visible false;
+
+			label ""
+			{
+				size 180 25;
+				position 10 35;
+				text "Enter new source for control";
+			};
+
+			label "lbl_control_name"
+			{
+				size 180 25;
+				position 10 10;
+			};
+		};
+
+		panel "pnl_video_settings"
+		{
+			style "window";
+			size 620 340;
+			position 90 120;
+			visible false;
+
+			label ""
+			{
+				style "wndtitle";
+				size 580 35;
+				position 20 285;
+				text "Video Settings";
+			};
+
+			label ""
+			{
+				position 20 240;
+				size 130 30;
+				text "Resolution";
+			};
+
+			dropdown "drp_resolution"
+			{
+				position 150 240;
+				size 150 30;
+			};
+
+			label ""
+			{
+				position 20 200;
+				size 130 30;
+				text "Fullscreen";
+			};
+
+			toggle "tgl_fullscreen"
+			{
+				position 150 200;
+				size 20 30;
+			};
+
+			label ""
+			{
+				position 20 160;
+				size 130 30;
+				text "Simple models";
+			};
+
+			toggle "tgl_simple_models"
+			{
+				position 150 160;
+				size 20 30;
+			};
+
+			label ""
+			{
+				position 20 120;
+				size 130 30;
+				text "Vertex buffers";
+			};
+
+			toggle "tgl_vertex_buffers"
+			{
+				position 150 120;
+				size 20 30;
+				value true;
+			};
+
+			label ""
+			{
+				position 320 240;
+				size 130 30;
+				text "Use shaders";
+			};
+
+			toggle "tgl_use_shaders"
+			{
+				position 450 240;
+				size 20 30;
+				value true;
+			};
+
+			label ""
+			{
+				position 320 200;
+				size 130 30;
+				text "Glow";
+			};
+
+			toggle "tgl_glow"
+			{
+				position 450 200;
+				size 20 30;
+				value true;
+			};
+
+			label ""
+			{
+				position 320 160;
+				size 130 30;
+				text "Reflection";
+			};
+
+			toggle "tgl_reflection"
+			{
+				position 450 160;
+				size 20 30;
+				value true;
+			};
+
+			label ""
+			{
+				position 320 120;
+				size 130 30;
+				text "Shadows";
+			};
+
+			toggle "tgl_shadows"
+			{
+				position 450 120;
+				size 20 30;
+				value true;
+			};
+
+			label ""
+			{
+				position 320 80;
+				size 130 30;
+				text "Shadow quality";
+			};
+
+			hslider "sld_shadow_quality"
+			{
+				position 450 85;
+				size 150 20;
+				range 7 11;
+				step 1;
+				value 9;
+			};
+
+			button "btn_video_settings_back"
+			{
+				size 200 30;
+				position 100 20;
+				text "Back";
+			};
+		};
+
+		panel "pnl_audio_settings"
+		{
+			style "window";
+			size 320 300;
+			position 240 160;
+			visible false;
+
+			label ""
+			{
+				style "wndtitle";
+				size 280 35;
+				position 20 245;
+				text "Audio Settings";
+			};
+
+			label ""
+			{
+				size 130 30;
+				position 20 200;
+				text "Music";
+			};
+
+			toggle "tgl_music"
+			{
+				size 20 30;
+				position 150 200;
+			};
+
+			hslider "sld_music_volume"
+			{
+				size 130 20;
+				position 170 205;
+				range 0 100;
+				step 1;
+			};
+
+			label ""
+			{
+				size 130 30;
+				position 20 160;
+				text "Effects";
+			};
+
+			toggle "tgl_sfx"
+			{
+				size 20 30;
+				position 150 160;
+			};
+
+			hslider "sld_sfx_volume"
+			{
+				size 130 20;
+				position 170 165;
+				range 0 100;
+				step 1;
+			};
+
+			button "btn_audio_settings_back"
+			{
+				size 200 30;
+				position 100 20;
+				text "Back";
+			};
+		};
+
+		panel "pnl_game_settings"
+		{
+			style "window";
+			size 320 300;
+			position 240 160;
+			visible false;
+
+			label ""
+			{
+				style "wndtitle";
+				size 280 35;
+				position 20 245;
+				text "Game Settings";
+			};
+
+			label ""
+			{
+				position 20 200;
+				size 130 30;
+				text "Difficulty";
+			};
+
+			dropdown "drp_difficulty"
+			{
+				position 150 200;
+				size 150 30;
+				item "Easy";
+				item "Normal";
+				item "Hard";
+			};
+
+			label ""
+			{
+				position 20 160;
+				size 130 30;
+				text "Brick explosions";
+			};
+
+			toggle "tgl_brick_explosions"
+			{
+				position 150 160;
+				size 150 30;
+				value true;
+			};
+
+			label ""
+			{
+				position 20 120;
+				size 130 30;
+				text "Physics quality";
+			};
+
+			hslider "sld_physics_quality"
+			{
+				position 150 125;
+				size 150 20;
+				range 0 4;
+				step 1;
+				value 2;
+			};
+
+			label ""
+			{
+				position 20 80;
+				size 130 30;
+				text "Optimize physics";
+			};
+
+			toggle "tgl_optimize_physics"
+			{
+				position 150 80;
+				size 150 30;
+				value true;
+			};
+
+			button "btn_game_settings_back"
+			{
+				size 200 30;
+				position 100 20;
+				text "Back";
+			};
+		};
+
+		panel "pnl_hall_of_fame"
+		{
+			style "window";
+			size 560 400;
+			position 120 60;
+			visible false;
+
+			label ""
+			{
+				style "wndtitle";
+				size 520 35;
+				position 20 345;
+				text "Hall of Fame";
+			};
+
+			list "lst_hall_of_fame_levels"
+			{
+				size 120 270;
+				position 20 60;
+			};
+
+			label ""
+			{
+				size 80 25;
+				position 160 305;
+				text "Score";
+			};
+
+			label ""
+			{
+				size 30 25;
+				position 240 305;
+				text "Lvl";
+			};
+
+			label ""
+			{
+				size 170 25;
+				position 270 305;
+				text "Name";
+			};
+
+			label ""
+			{
+				size 100 25;
+				position 440 305;
+				text "Date";
+			};
+
+			table "tbl_highscores"
+			{
+				size 380 240;
+				position 160 60;
+				columns 4;
+				rows 10;
+				column_width 0 80;
+				column_width 1 30;
+				column_width 2 170;
+				column_width 3 100;
+			};
+
+			button "btn_hall_of_fame_back"
+			{
+				size 200 30;
+				position 340 20;
+				text "Back";
+			};
+		};
+	};
+
+	logic
+	{
+		bind "btn_quit" "quit";
+		bind "btn_game" "show_panel:pnl_game";
+		bind "btn_settings" "show_panel:pnl_settings";
+		bind "btn_editor" "editor";
+		bind "btn_hall_of_fame" "show_panel:pnl_hall_of_fame";
+
+		bind "btn_video_settings" "show_panel:pnl_video_settings";
+		bind "btn_audio_settings" "show_panel:pnl_audio_settings";
+		bind "btn_control_settings" "show_panel:pnl_control_settings";
+		bind "btn_game_settings" "show_panel:pnl_game_settings";
+		bind "btn_settings_back" "save_settings";
+		bind "btn_settings_back" "close_panel";
+
+		bind "btn_control_move_left" "control:move_left";
+		bind "btn_control_move_right" "control:move_right";
+		bind "btn_control_flip_cw" "control:flip_left";
+		bind "btn_control_flip_ccw" "control:flip_right";
+		bind "btn_control_turbo" "control:turbo";
+		bind "btn_control_pause" "control:pause";
+		bind "sld_sensitivity" "setting:sensitivity";
+		bind "sld_speed" "setting:speed";
+		bind "btn_control_settings_back" "close_panel";
+
+		bind "btn_start_default_series" "start_series:Default";
+		bind "btn_start_single_level" "show_panel:pnl_single_level";
+		bind "btn_single_level_back" "close_panel";
+		bind "lst_levels" "levels";
+		bind "btn_single_level_ok" "start_selected_level";
+		bind "btn_game_back" "close_panel";
+
+		bind "drp_resolution" "resolution";
+		bind "tgl_fullscreen" "setting:fullscreen";
+		bind "tgl_simple_models" "setting:simple_models";
+		bind "tgl_vertex_buffers" "setting:vertex_buffers";
+		bind "tgl_use_shaders" "setting:use_shaders";
+		bind "tgl_glow" "setting:glow";
+		bind "tgl_reflection" "setting:reflection";
+		bind "tgl_shadows" "setting:shadows";
+		bind "sld_shadow_quality" "setting:shadow_quality";
+		bind "btn_video_settings_back" "close_panel";
+
+		bind "drp_difficulty" "setting:difficulty";
+		bind "tgl_brick_explosions" "setting:explosions";
+		bind "sld_physics_quality" "setting:physics_quality";
+		bind "tgl_optimize_physics" "setting:optimize_physics";
+		bind "btn_game_settings_back" "close_panel";
+
+		bind "lst_hall_of_fame_levels" "highscore_levels";
+		bind "tbl_highscores" "highscore_table";
+		bind "btn_hall_of_fame_back" "close_panel";
+
+		bind "tgl_music" "setting:music_enabled";
+		bind "sld_music_volume" "setting:music_volume";
+		bind "tgl_sfx" "setting:sfx_enabled";
+		bind "sld_sfx_volume" "setting:sfx_volume";
+		bind "btn_audio_settings_back" "close_panel";
+	};
+};
+
+userinterface "editor"
+{
+	root
+	{
+		size 800 600;
+
+		panel "pnl_toolbar"
+		{
+			style "thin window";
+			size 120 600;
+			position 0 0;
+
+			dropdown "drp_brick_types"
+			{
+				position 10 560;
+				size 100 30;
+			};
+
+			dropdown "drp_brick_colors"
+			{
+				position 10 520;
+				size 100 30;
+			};
+
+			button "btn_properties"
+			{
+				position 10 440;
+				size 100 30;
+				text "Properties";
+			};
+
+			button "btn_play"
+			{
+				position 10 400;
+				size 100 30;
+				text "Test";
+			};
+
+			button "btn_new"
+			{
+				position 10 320;
+				size 100 30;
+				text "New";
+			};
+
+			button "btn_load"
+			{
+				position 10 280;
+				size 100 30;
+				text "Load";
+			};
+
+			button "btn_save"
+			{
+				position 10 240;
+				size 100 30;
+				text "Save";
+			};
+
+			button "btn_exit"
+			{
+				position 10 10;
+				size 100 30;
+				text "Exit";
+			};
+		};
+
+		panel "pnl_filesel"
+		{
+			style "window";
+			size 280 400;
+			position 260 100;
+			visible false;
+
+			label "lbl_filesel_title"
+			{
+				style "wndtitle";
+				size 240 30;
+				position 20 345;
+
+				text "Select file";
+			};
+
+			list "lst_files"
+			{
+				size 240 230;
+				position 20 100;
+			};
+
+			entry "ent_filename"
+			{
+				size 240 30;
+				position 20 60;
+			};
+
+			button "btn_filesel_ok"
+			{
+				size 80 30;
+				position 180 20;
+
+				text "OK";
+			};
+
+			button "btn_filesel_cancel"
+			{
+				size 80 30;
+				position 90 20;
+
+				text "Cancel";
+			};
+		};
+
+		panel "pnl_properties"
+		{
+			style "window";
+			size 320 200;
+			position 260 200;
+			visible false;
+
+			label "lbl_properties_title"
+			{
+				style "wndtitle";
+				size 280 30;
+				position 20 145;
+
+				text "Level properties";
+			};
+
+			label ""
+			{
+				size 60 30;
+				position 20 100;
+
+				text "Size";
+			};
+
+			entry "ent_width"
+			{
+				size 60 30;
+				position 80 100;
+			};
+
+			entry "ent_height"
+			{
+				size 60 30;
+				position 150 100;
+			};
+
+			label ""
+			{
+				size 60 30;
+				position 20 60;
+
+				text "Title";
+			};
+
+			entry "ent_title"
+			{
+				size 220 30;
+				position 80 60;
+			};
+
+			button "btn_properties_ok"
+			{
+				size 80 30;
+				position 220 20;
+
+				text "OK";
+			};
+
+			button "btn_properties_cancel"
+			{
+				size 80 30;
+				position 130 20;
+
+				text "Cancel";
+			};
+		};
+	};
+};

@@ -1,0 +1,27 @@
+/* $Id$ */
+
+package "flipout"
+{
+	version "1.1";
+	description "Breakout clone with physics";
+
+	require "mspgbase";
+	require "mspgl";
+	require "mspgltk";
+	require "mspfs";
+	require "mspal";
+	require "ode";
+
+	if "arch=win32"
+	{
+		build_info
+		{
+			ldflag "-mwindows";
+		};
+	};
+
+	program "flipout"
+	{
+		source "source";
+	};
+};

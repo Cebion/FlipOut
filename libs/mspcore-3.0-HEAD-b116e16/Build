@@ -1,0 +1,131 @@
+package "mspcore"
+{
+	version "3.0";
+	description "Mikkosoft Productions core library";
+
+	require "sigc++-2.0";
+	build_info
+	{
+		threads true;
+		standard CXX "c++11";
+	};
+	if_arch "linux"
+	{
+		build_info
+		{
+			library "dl";
+		};
+	};
+	if_arch "android"
+	{
+		build_info
+		{
+			library "android";
+			library "log";
+		};
+	};
+
+	if_arch "darwin"
+	{
+		build_info
+		{
+			library "Foundation.framework";
+		};
+	};
+
+	if_arch "windows"
+	{
+		build_info
+		{
+			library "advapi32";
+			library "shell32";
+		};
+	};
+
+	feature "zlib" "Support compression with zlib"
+	{
+		default "yes";
+	};
+	if_feature "zlib"
+	{
+		require "zlib";
+	};
+
+	feature "exception_trace" "Support exception backtraces";
+
+	library "mspcore"
+	{
+		source "source/core";
+		source "source/debug";
+		source "source/time";
+		source "source/strings";
+		source "source/stringcodec";
+		source "source/io";
+		source "source/fs";
+		if_arch "windows"
+		{
+			overlay "windows";
+		};
+		if_arch "darwin"
+		{
+			overlay "osx";
+		};
+		if_arch "android"
+		{
+			overlay "android";
+			build_info
+			{
+				keep_symbol "ANativeActivity_onCreate";
+			};
+		};
+		if_arch "!windows"
+		{
+			overlay "unix";
+		};
+		overlay "generic";
+		install true;
+		install_map
+		{
+			map "source" "include/msp";
+		};
+	};
+
+	program "grep"
+	{
+		source "examples/grep.cpp";
+		use "mspcore";
+	};
+
+	program "transcode"
+	{
+		source "examples/transcode.cpp";
+		use "mspcore";
+	};
+
+	program "ls"
+	{
+		source "examples/ls.cpp";
+		use "mspcore";
+	};
+
+	program "syncdir"
+	{
+		source "examples/syncdir.cpp";
+		use "mspcore";
+	};
+
+	if_feature "zlib"
+	{
+		program "z"
+		{
+			source "examples/z.cpp";
+			use "mspcore";
+		};
+	};
+
+	source_tarball
+	{
+		source "License.txt";
+		source "source/stringcodec/jisx0208.table";
+	};
+};

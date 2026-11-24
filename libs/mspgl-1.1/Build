@@ -1,0 +1,29 @@
+/* $Id: Build 85 2009-10-05 18:48:09Z tdb $ */
+
+package "mspgl"
+{
+	version "1.1";
+	description "Lightweight C++/OpenGL graphics engine";
+
+	require "mspdatafile";
+	require "mspgbase";
+	require "opengl";
+
+	headers "msp/gl"
+	{
+		source "source";
+		install true;
+	};
+
+	library "mspgl"
+	{
+		source "source";
+		install true;
+	};
+
+	tarball "@src"
+	{
+		source "License.txt";
+		source "Changelog.txt";
+	};
+};

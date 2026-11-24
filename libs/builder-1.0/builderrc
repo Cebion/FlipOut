@@ -1,0 +1,91 @@
+/* $Id: builderrc 83 2009-02-19 08:22:21Z tdb $ */
+
+binary_package "opengl"
+{
+	build_info
+	{
+		library "GL";
+	};
+};
+
+binary_package "opengl/win32"
+{
+	build_info
+	{
+		library "opengl32";
+	};
+};
+
+binary_package "gmpxx"
+{
+	build_info
+	{
+		library "gmpxx";
+	};
+};
+
+binary_package "fmod4"
+{
+	build_info
+	{
+		incpath "@/api/inc";
+		libpath "@/api/lib";
+		library "fmodex";
+	};
+	need_path true;
+};
+
+binary_package "xlib"
+{
+	build_info
+	{
+		library "X11";
+	};
+};
+
+binary_package "devil"
+{
+	build_info
+	{
+		library "IL";
+	};
+};
+
+binary_package "devil/win32"
+{
+	build_info
+	{
+		library "DevIL";
+	};
+};
+
+binary_package "openal/win32"
+{
+	build_info
+	{
+		library "OpenAL32";
+	};
+};
+
+architecture "arm"
+{
+	prefix "arm-linux-gnu";
+};
+
+architecture "win32"
+{
+	prefix "i586-mingw32msvc";
+};
+
+profile "debug"
+{
+	option "debug" "1";
+	option "outdir" "$profile";
+};
+
+profile "release"
+{
+	option "optimize" "3";
+	option "strip" "1";
+	option "outdir" "$profile";
+};

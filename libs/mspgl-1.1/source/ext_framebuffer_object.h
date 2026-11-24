@@ -1,0 +1,33 @@
+#ifndef MSP_GL_EXT_FRAMEBUFFER_OBJECT_
+#define MSP_GL_EXT_FRAMEBUFFER_OBJECT_
+
+#include "gl.h"
+#include <GL/glext.h>
+
+namespace Msp {
+namespace GL {
+
+extern PFNGLISRENDERBUFFEREXTPROC glIsRenderbufferEXT;
+extern PFNGLBINDRENDERBUFFEREXTPROC glBindRenderbufferEXT;
+extern PFNGLDELETERENDERBUFFERSEXTPROC glDeleteRenderbuffersEXT;
+extern PFNGLGENRENDERBUFFERSEXTPROC glGenRenderbuffersEXT;
+extern PFNGLRENDERBUFFERSTORAGEEXTPROC glRenderbufferStorageEXT;
+extern PFNGLGETRENDERBUFFERPARAMETERIVEXTPROC glGetRenderbufferParameterivEXT;
+extern PFNGLISFRAMEBUFFEREXTPROC glIsFramebufferEXT;
+extern PFNGLBINDFRAMEBUFFEREXTPROC glBindFramebufferEXT;
+extern PFNGLDELETEFRAMEBUFFERSEXTPROC glDeleteFramebuffersEXT;
+extern PFNGLGENFRAMEBUFFERSEXTPROC glGenFramebuffersEXT;
+extern PFNGLCHECKFRAMEBUFFERSTATUSEXTPROC glCheckFramebufferStatusEXT;
+extern PFNGLFRAMEBUFFERTEXTURE1DEXTPROC glFramebufferTexture1DEXT;
+extern PFNGLFRAMEBUFFERTEXTURE2DEXTPROC glFramebufferTexture2DEXT;
+extern PFNGLFRAMEBUFFERTEXTURE3DEXTPROC glFramebufferTexture3DEXT;
+extern PFNGLFRAMEBUFFERRENDERBUFFEREXTPROC glFramebufferRenderbufferEXT;
+extern PFNGLGETFRAMEBUFFERATTACHMENTPARAMETERIVEXTPROC glGetFramebufferAttachmentParameterivEXT;
+extern PFNGLGENERATEMIPMAPEXTPROC glGenerateMipmapEXT;
+
+void init_ext_framebuffer_object();
+
+} // namespace GL
+} // namespace Msp
+
+#endif

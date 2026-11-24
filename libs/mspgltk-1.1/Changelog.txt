@@ -1,0 +1,17 @@
+1.1
+* Icon support in Button
+* Tooltip support
+* Some internal enhancements
+
+1.0
+* Support for exclusive toggles (i.e. option buttons)
+* Add a hello world example
+* Minor improvements
+* Bugfixes
+  - Clear input focus when the focused widget is hidden
+  - Prevent Alignment from sending things to oblivion in certain cases
+
+0.9
+* First release
+
+($Id: Changelog.txt 56 2009-10-07 17:55:07Z tdb $)

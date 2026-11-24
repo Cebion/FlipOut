@@ -1,0 +1,98 @@
+technique "normal ball.tech"
+{
+	shader "ball.shader"
+	{
+		uniform1i "use_shadow" 0;
+	};
+	material_inline
+	{
+		diffuse 0.8 0.8 0.8 1.0;
+	};
+	shader_texture "noise3d";
+	pass "glow";
+	pass "noshader";
+	pass "shadow"
+	{
+		use_textures false;
+	};
+	pass "light"
+	{
+		shader "ball.shader"
+		{
+			uniform1i "use_shadow" 1;
+			uniform1i "shadow" 2;
+		};
+	};
+};
+
+ball "normal ball"
+{
+	radius 0.3;
+	mesh "ball.mesh";
+	technique "normal ball.tech";
+};
+
+technique "glowing ball.tech"
+{
+	shader "ball.shader"
+	{
+		uniform1i "use_shadow" 0;
+	};
+	shader_texture "noise3d";
+	pass "glow"
+	{
+		shader "ball glow.shader";
+	};
+	pass "noshader";
+	pass "shadow"
+	{
+		use_textures false;
+	};
+	pass "light"
+	{
+		shader "ball.shader"
+		{
+			uniform1i "use_shadow" 1;
+			uniform1i "shadow" 2;
+		};
+	};
+};
+
+ball "power ball"
+{
+	radius 0.3;
+	power 3;
+
+	mesh "ball.mesh";
+	technique "glowing ball.tech";
+	material_inline
+	{
+		diffuse 0.3 0.3 1.0 1.0;
+	};
+};
+
+ball "collector ball"
+{
+	radius 0.3;
+	collect_bonuses true;
+
+	mesh "ball.mesh";
+	technique "glowing ball.tech";
+	material_inline
+	{
+		diffuse 0.3 1.0 0.3 1.0;
+	};
+};
+
+ball "link ball"
+{
+	radius 0.3;
+	link_distance 5;
+
+	mesh "ball.mesh";
+	technique "glowing ball.tech";
+	material_inline
+	{
+		diffuse 1.0 0.3 0.3 1.0;
+	};
+};

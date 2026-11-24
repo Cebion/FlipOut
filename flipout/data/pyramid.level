@@ -1,0 +1,137 @@
+title "Pyramid";
+size 30 25;
+
+brick "marble" { color "white"; position -14 8; };
+brick "marble" { color "white"; position -12 8; };
+brick "marble" { color "white"; position -10 8; };
+brick "marble" { color "white"; position  -8 8; };
+brick "marble" { color "white"; position  -6 8; };
+brick "marble" { color "white"; position  -4 8; };
+brick "marble" { color "white"; position  -2 8; };
+brick "marble" { color "white"; position   0 8; };
+brick "marble" { color "white"; position   2 8; };
+brick "marble" { color "white"; position   4 8; };
+brick "marble" { color "white"; position   6 8; };
+brick "marble" { color "white"; position   8 8; };
+brick "marble" { color "white"; position  10 8; };
+brick "marble" { color "white"; position  12 8; };
+brick "marble" { color "white"; position  14 8; };
+
+brick "marble" { color "cyan"; position -13.5 9; bonus "big score"; };
+brick "marble" { color "turquoise"; position -11.5 9; };
+brick "marble" { color "blue"; position  -9.5 9; };
+brick "marble" { color "indigo"; position  -7.5 9; };
+brick "marble" { color "indigo"; position  -5.5 9; };
+brick "marble" { color "indigo"; position  -3.5 9; };
+brick "marble" { color "indigo"; position  -1.5 9; };
+brick "marble" { color "indigo"; position   0.5 9; };
+brick "marble" { color "indigo"; position   2.5 9; };
+brick "marble" { color "indigo"; position   4.5 9; };
+brick "marble" { color "indigo"; position   6.5 9; };
+brick "marble" { color "blue"; position   8.5 9; };
+brick "marble" { color "turquoise"; position  10.5 9; };
+brick "marble" { color "cyan"; position  12.5 9; bonus "big score"; };
+
+brick "marble" { color "turquoise"; position -13 10; };
+brick "marble" { color "blue"; position -11 10; };
+brick "marble" { color "indigo"; position  -9 10; };
+brick "marble" { color "indigo"; position  -7 10; };
+brick "marble" { color "indigo"; position  -5 10; };
+brick "marble" { color "indigo"; position  -3 10; };
+brick "marble" { color "indigo"; position  -1 10; };
+brick "marble" { color "indigo"; position   1 10; };
+brick "marble" { color "indigo"; position   3 10; };
+brick "marble" { color "indigo"; position   5 10; };
+brick "marble" { color "indigo"; position   7 10; };
+brick "marble" { color "blue"; position   9 10; };
+brick "marble" { color "turquoise"; position  11 10; };
+
+brick "marble" { color "blue"; position -12.5 11; };
+brick "marble" { color "indigo"; position -10.5 11; };
+brick "marble" { color "indigo"; position  -8.5 11; };
+brick "marble" { color "indigo"; position  -6.5 11; };
+brick "marble" { color "blue"; position  -4.5 11; };
+brick "marble" { color "indigo"; position  -2.5 11; };
+brick "marble" { color "indigo"; position  -0.5 11; };
+brick "marble" { color "blue"; position   1.5 11; };
+brick "marble" { color "indigo"; position   3.5 11; };
+brick "marble" { color "indigo"; position   5.5 11; };
+brick "marble" { color "indigo"; position   7.5 11; };
+brick "marble" { color "blue"; position   9.5 11; };
+
+brick "marble" { color "indigo"; position -12 12; };
+brick "marble" { color "indigo"; position -10 12; };
+brick "marble" { color "indigo"; position  -8 12; };
+brick "marble" { color "blue"; position  -6 12; };
+brick "marble" { color "turquoise"; position  -4 12; };
+brick "marble" { color "indigo"; position  -2 12; };
+brick "marble" { color "turquoise"; position   0 12; };
+brick "marble" { color "blue"; position   2 12; };
+brick "marble" { color "indigo"; position   4 12; };
+brick "marble" { color "indigo"; position   6 12; };
+brick "marble" { color "indigo"; position   8 12; };
+
+brick "marble" { color "indigo"; position -11.5 13; };
+brick "marble" { color "indigo"; position  -9.5 13; };
+brick "marble" { color "blue"; position  -7.5 13; };
+brick "marble" { color "turquoise"; position  -5.5 13; };
+brick "marble" { color "cyan"; position  -3.5 13; bonus "big score"; };
+brick "marble" { color "cyan"; position  -1.5 13; bonus "big score"; };
+brick "marble" { color "turquoise"; position   0.5 13; };
+brick "marble" { color "blue"; position   2.5 13; };
+brick "marble" { color "indigo"; position   4.5 13; };
+brick "marble" { color "indigo"; position   6.5 13; };
+
+brick "marble" { color "indigo"; position -11 14; };
+brick "marble" { color "indigo"; position  -9 14; };
+brick "marble" { color "indigo"; position  -7 14; };
+brick "marble" { color "indigo"; position  -5 14; };
+brick "marble" { color "cyan"; position  -3 14; bonus "big score"; };
+brick "marble" { color "indigo"; position  -1 14; };
+brick "marble" { color "indigo"; position   1 14; };
+brick "marble" { color "indigo"; position   3 14; };
+brick "marble" { color "indigo"; position   5 14; };
+
+brick "marble" { color "indigo"; position -10.5 15; };
+brick "marble" { color "indigo"; position  -8.5 15; };
+brick "marble" { color "indigo"; position  -6.5 15; };
+brick "marble" { color "turquoise"; position  -4.5 15; };
+brick "marble" { color "turquoise"; position  -2.5 15; };
+brick "marble" { color "indigo"; position  -0.5 15; };
+brick "marble" { color "indigo"; position   1.5 15; };
+brick "marble" { color "indigo"; position   3.5 15; };
+
+brick "marble" { color "indigo"; position -10 16; };
+brick "marble" { color "indigo"; position  -8 16; };
+brick "marble" { color "blue"; position  -6 16; };
+brick "marble" { color "blue"; position  -4 16; };
+brick "marble" { color "blue"; position  -2 16; };
+brick "marble" { color "indigo"; position   0 16; };
+brick "marble" { color "indigo"; position   2 16; };
+
+brick "marble" { color "indigo"; position -9.5 17; };
+brick "marble" { color "indigo"; position -7.5 17; };
+brick "marble" { color "indigo"; position -5.5 17; };
+brick "marble" { color "indigo"; position -3.5 17; };
+brick "marble" { color "indigo"; position -1.5 17; };
+brick "marble" { color "indigo"; position  0.5 17; };
+
+brick "marble" { color "indigo"; position -9 18; };
+brick "marble" { color "indigo"; position -7 18; };
+brick "marble" { color "indigo"; position -5 18; };
+brick "marble" { color "indigo"; position -3 18; };
+brick "marble" { color "indigo"; position -1 18; };
+
+brick "marble" { color "indigo"; position -8.5 19; };
+brick "marble" { color "indigo"; position -6.5 19; };
+brick "marble" { color "indigo"; position -4.5 19; };
+brick "marble" { color "indigo"; position -2.5 19; };
+
+brick "marble" { color "blue"; position -8 20; };
+brick "marble" { color "blue"; position -6 20; };
+brick "marble" { color "blue"; position -4 20; };
+
+brick "marble" { color "turquoise"; position -7.5 21; };
+brick "marble" { color "turquoise"; position -5.5 21; };
+
+brick "marble" { color "cyan"; position -7 22; bonus "huge score"; };

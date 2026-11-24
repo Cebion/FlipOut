@@ -1,0 +1,57 @@
+2.0
+
+== Changes from pre-2.0 mspcore ==
+
+1.1
+* Time zone support
+* Some more time operations
+* Bugfixes
+  - Compatibility fixes for FreeBSD and 64-bit systems
+  - Proper handling of string arguments with spaces in GetOpt
+  - DateTime addition fixes
+  - Timer no longer drops duplicate timeouts
+
+1.0
+* First released version
+
+== Changes from pre-2.0 mspstrings ==
+
+1.1
+* Codec autodetection
+* lexical_cast rewritten from scratch
+* Some new utility functions
+* Bugfixes
+  - 64-bit compatibility
+  - Don't generate invalid octal escape sequences
+  - UTF-8 decoder now passes the UTF-8 test file
+  - Regex fixes
+
+1.0
+* First released version
+
+== Changes from pre-2.0 mspio ==
+
+1.1
+* Filter class makes adding filters easier
+* Memory class enables I/O from/to memory buffers
+* Console size can be queried
+* Bugfixes
+  - Don't consider an empty set for poll an error
+
+1.0
+* First released version
+
+== Changes from pre-2.0 mspfs ==
+
+1.1
+* Always start relative paths with a dot
+* Bugfixes
+  - Fix 64-bit compilation
+
+1.0.1
+* Bugfixes
+  - Make dirname behave sensibly for single-component paths
+  - Fix win32 compilation
+
+1.0
+* First release

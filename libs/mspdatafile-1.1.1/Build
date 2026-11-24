@@ -1,0 +1,41 @@
+/* $Id: Build 57 2009-09-21 16:57:45Z tdb $ */
+
+package "mspdatafile"
+{
+	version "1.1.1";
+	description "Structured datafile library";
+
+	require "mspcore";
+	require "mspstrings";
+	require "mspio";
+
+	headers "msp/datafile"
+	{
+		source "source";
+		install true;
+	};
+
+	library "mspdatafile"
+	{
+		source "source";
+		install true;
+	};
+
+	program "mspdatatool"
+	{
+		require "mspfs";
+		source "tool";
+		install true;
+		build_info
+		{
+			library "mspdatafile";
+		};
+	};
+	
+	tarball "@src"
+	{
+		source "Readme.txt";
+		source "License.txt";
+		source "Changelog.txt";
+	};
+};

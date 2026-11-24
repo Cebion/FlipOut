@@ -1,0 +1,54 @@
+#ifndef MSP_GL_VERSION_1_2_
+#define MSP_GL_VERSION_1_2_
+
+#include "gl.h"
+#include <GL/glext.h>
+
+namespace Msp {
+namespace GL {
+
+extern PFNGLBLENDCOLORPROC glBlendColor;
+extern PFNGLBLENDEQUATIONPROC glBlendEquation;
+extern PFNGLDRAWRANGEELEMENTSPROC glDrawRangeElements;
+extern PFNGLCOLORTABLEPROC glColorTable;
+extern PFNGLCOLORTABLEPARAMETERFVPROC glColorTableParameterfv;
+extern PFNGLCOLORTABLEPARAMETERIVPROC glColorTableParameteriv;
+extern PFNGLCOPYCOLORTABLEPROC glCopyColorTable;
+extern PFNGLGETCOLORTABLEPROC glGetColorTable;
+extern PFNGLGETCOLORTABLEPARAMETERFVPROC glGetColorTableParameterfv;
+extern PFNGLGETCOLORTABLEPARAMETERIVPROC glGetColorTableParameteriv;
+extern PFNGLCOLORSUBTABLEPROC glColorSubTable;
+extern PFNGLCOPYCOLORSUBTABLEPROC glCopyColorSubTable;
+extern PFNGLCONVOLUTIONFILTER1DPROC glConvolutionFilter1D;
+extern PFNGLCONVOLUTIONFILTER2DPROC glConvolutionFilter2D;
+extern PFNGLCONVOLUTIONPARAMETERFPROC glConvolutionParameterf;
+extern PFNGLCONVOLUTIONPARAMETERFVPROC glConvolutionParameterfv;
+extern PFNGLCONVOLUTIONPARAMETERIPROC glConvolutionParameteri;
+extern PFNGLCONVOLUTIONPARAMETERIVPROC glConvolutionParameteriv;
+extern PFNGLCOPYCONVOLUTIONFILTER1DPROC glCopyConvolutionFilter1D;
+extern PFNGLCOPYCONVOLUTIONFILTER2DPROC glCopyConvolutionFilter2D;
+extern PFNGLGETCONVOLUTIONFILTERPROC glGetConvolutionFilter;
+extern PFNGLGETCONVOLUTIONPARAMETERFVPROC glGetConvolutionParameterfv;
+extern PFNGLGETCONVOLUTIONPARAMETERIVPROC glGetConvolutionParameteriv;
+extern PFNGLGETSEPARABLEFILTERPROC glGetSeparableFilter;
+extern PFNGLSEPARABLEFILTER2DPROC glSeparableFilter2D;
+extern PFNGLGETHISTOGRAMPROC glGetHistogram;
+extern PFNGLGETHISTOGRAMPARAMETERFVPROC glGetHistogramParameterfv;
+extern PFNGLGETHISTOGRAMPARAMETERIVPROC glGetHistogramParameteriv;
+extern PFNGLGETMINMAXPROC glGetMinmax;
+extern PFNGLGETMINMAXPARAMETERFVPROC glGetMinmaxParameterfv;
+extern PFNGLGETMINMAXPARAMETERIVPROC glGetMinmaxParameteriv;
+extern PFNGLHISTOGRAMPROC glHistogram;
+extern PFNGLMINMAXPROC glMinmax;
+extern PFNGLRESETHISTOGRAMPROC glResetHistogram;
+extern PFNGLRESETMINMAXPROC glResetMinmax;
+extern PFNGLTEXIMAGE3DPROC glTexImage3D;
+extern PFNGLTEXSUBIMAGE3DPROC glTexSubImage3D;
+extern PFNGLCOPYTEXSUBIMAGE3DPROC glCopyTexSubImage3D;
+
+void init_version_1_2();
+
+} // namespace GL
+} // namespace Msp
+
+#endif

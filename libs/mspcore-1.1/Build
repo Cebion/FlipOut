@@ -1,0 +1,56 @@
+/* $Id: Build 69 2009-09-21 16:40:37Z tdb $ */
+
+package "mspcore"
+{
+	version "1.1";
+	description "Mikkosoft Productions core library";
+
+	require "sigc++-2.0";
+	if "arch!=win32"
+	{
+		build_info
+		{
+			library "pthread";
+		};
+	};
+	if "arch=linux"
+	{
+		build_info
+		{
+			library "dl";
+		};
+	};
+
+	feature "exception_backtrace" "Generate a backtrace when an exception is thrown.";
+
+	headers "msp/core"
+	{
+		source "source/core";
+		install true;
+	};
+
+	headers "msp/time"
+	{
+		source "source/time";
+		install true;
+	};
+
+	headers "msp/debug"
+	{
+		source "source/debug";
+		install true;
+	};
+
+	library "mspcore"
+	{
+		source "source/core";
+		source "source/debug";
+		source "source/time";
+		install true;
+	};
+
+	tarball "@src"
+	{
+		source "License.txt";
+	};
+};

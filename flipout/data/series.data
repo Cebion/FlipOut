@@ -1,0 +1,13 @@
+series "Default"
+{
+	level "sandwich.level";
+	level "over the rainbow.level";
+	level "padded cell.level";
+	level "peace.level";
+	level "get vertical.level";
+	level "slanted shelves.level";
+	level "nuclear power.level";
+	level "walled up.level";
+	level "quadrants.level";
+	level "flowers of energy.level";
+};

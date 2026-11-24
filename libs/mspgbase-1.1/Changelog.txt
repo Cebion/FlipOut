@@ -1,0 +1,18 @@
+1.1
+* Support libpng as an alternative to DevIL
+* Mouse wheel support on Win32
+* Bugfixes
+  - Plug some memory leaks
+  - More fullscreen mode fixes
+
+1.0
+* Use pimpl to avoid exposing platform-specific details
+* Normalize device axis ranges to [-1, 1]
+* Improvements to dead zone and threshold
+* Bugfixes
+  - Fullscreen mode hopefully works better now
+
+0.9
+* First release
+
+($Id: Changelog.txt 42 2009-10-05 16:38:17Z tdb $)

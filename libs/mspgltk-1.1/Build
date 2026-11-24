@@ -1,0 +1,38 @@
+/* $Id: Build 56 2009-10-07 17:55:07Z tdb $ */
+
+package "mspgltk"
+{
+	version "1.1";
+	description "OpenGL-based widget toolkit";
+
+	require "mspgl";
+	require "mspgbase";
+	require "mspfs";
+
+	headers "msp/gltk"
+	{
+		source "source";
+		install true;
+	};
+
+	library "mspgltk"
+	{
+		source "source";
+		install true;
+	};
+
+	program "helloworld"
+	{
+		source "helloworld.cpp";
+		build_info
+		{
+			library "mspgltk";
+		};
+	};
+
+	tarball "@src"
+	{
+		source "License.txt";
+		source "Changelog.txt";
+	};
+};
