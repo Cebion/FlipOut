@@ -1,0 +1,28 @@
+/* $Id$ */
+
+package "mspio"
+{
+	version "1.1";
+	description "Object-oriented input/output library";
+
+	require "mspstrings";
+	require "mspcore";
+	require "sigc++-2.0";
+
+	headers "msp/io"
+	{
+		source "source";
+		install true;
+	};
+
+	library "mspio"
+	{
+		source "source";
+		install true;
+	};
+
+	tarball "@src"
+	{
+		source "License.txt";
+	};
+};

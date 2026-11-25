@@ -1,0 +1,45 @@
+// $Id$
+
+package "mspstrings"
+{
+	version "1.1";
+	description "String utilities library";
+
+	require "mspcore";
+
+	headers "msp/strings"
+	{
+		source "source";
+		install true;
+	};
+
+	library "mspstrings"
+	{
+		source "source";
+		install true;
+	};
+
+	program "grep"
+	{
+		source "grep.cpp";
+		build_info
+		{
+			library "mspstrings";
+		};
+	};
+
+	program "transcode"
+	{
+		source "transcode.cpp";
+		build_info
+		{
+			library "mspstrings";
+		};
+	};
+
+	tarball "@src"
+	{
+		source "License.txt";
+		source "source/jisx0208.table";
+	};
+};

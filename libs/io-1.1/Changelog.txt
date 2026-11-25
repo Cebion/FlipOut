@@ -1,0 +1,11 @@
+1.1
+* Filter class makes adding filters easier
+* Memory class enables I/O from/to memory buffers
+* Console size can be queried
+* Bugfixes
+  - Don't consider an empty set for poll an error
+
+1.0
+* First released version
+
+($Id$)

@@ -1,0 +1,27 @@
+/* $Id$ */
+
+package "mspfs"
+{
+	version "1.1";
+	description "Filesystem utilities";
+
+	require "mspstrings";
+
+	headers "msp/fs"
+	{
+		source "source";
+		install true;
+	};
+
+	library "mspfs"
+	{
+		source "source";
+		install true;
+	};
+
+	tarball "@src"
+	{
+		source "Changelog.txt";
+		source "License.txt";
+	};
+};

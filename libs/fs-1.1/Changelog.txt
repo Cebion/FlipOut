@@ -1,0 +1,14 @@
+1.1
+* Always start relative paths with a dot
+* Bugfixes
+  - Fix 64-bit compilation
+
+1.0.1
+* Bugfixes
+  - Make dirname behave sensibly for single-component paths
+  - Fix win32 compilation
+
+1.0
+* First release
+
+($Id$)

@@ -1,0 +1,14 @@
+1.1
+* Codec autodetection
+* lexical_cast rewritten from scratch
+* Some new utility functions
+* Bugfixes
+  - 64-bit compatibility
+  - Don't generate invalid octal escape sequences
+  - UTF-8 decoder now passes the UTF-8 test file
+  - Regex fixes
+
+1.0
+* First released version
+
+($Id$)
